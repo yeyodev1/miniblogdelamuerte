@@ -13,6 +13,7 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@nuxt/http": "^0.6.4",
     "airtable": "^0.11.6",
     "babel-runtime": "^6.26.0",
     "core-js": "^3.30.1",
