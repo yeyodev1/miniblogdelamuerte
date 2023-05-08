@@ -1,6 +1,8 @@
 <template>
   <div class="article-card">
-    <h3>{{ title }}</h3>
+    <nuxt-link :to="slug">
+      <h3>{{ title }}</h3>
+    </nuxt-link>
     <div class="author">
       <p>Por {{ author }}</p>
       <small>Fecha de publicación: {{ date }}</small>
@@ -12,7 +14,7 @@
       {{ description }}
     </p>
     <div class="actions">
-      <a class="btn" :href="slug">Ir al post</a>
+      <nuxt-link class="btn" :to="slug">Ir al post</nuxt-link>
     </div>
   </div>
 </template>
@@ -34,7 +36,7 @@ export default {
       default: '',
     },
     date: {
-      type: String,
+      type: Date,
       default: '',
     },
     cover: {

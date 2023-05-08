@@ -3,7 +3,11 @@
     <AboutMe />
     <div class="content">
       <main>
-        <ArticleCard v-for="article in articles" :key="article.slug" />
+        <ArticleCard
+          v-for="article in articles"
+          :key="article.slug"
+          v-bind="article"
+        />
       </main>
     </div>
   </div>
@@ -13,7 +17,13 @@
 export default {
   name: 'IndexPage',
   data: () => ({
-    articles: [1, 2, 3, 4, 5],
+    articles: [
+      {
+        title: 'Mi primer post',
+        slug: 'mi-primer-post',
+        date: new Date(),
+      },
+    ],
   }),
 }
 </script>
