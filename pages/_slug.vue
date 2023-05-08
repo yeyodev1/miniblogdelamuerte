@@ -19,7 +19,6 @@
 <script>
 export default {
   name: 'ArticlePage',
-  component: {},
   data: () => ({
     post: {
       slug: 'mi-primer-post',
@@ -32,5 +31,11 @@ export default {
         '#title\n\n##Second title\n\nLorem ipsum dolor sit amet, consectetur',
     },
   }),
+  head() {
+    return {
+      title: this.post?.title,
+      meta: [{ name: 'description', content: this.post?.description || '' }],
+    }
+  },
 }
 </script>
