@@ -8,7 +8,9 @@
     <figure>
       <img :src="cover" alt="cover" />
     </figure>
-    <p>{{ description }}</p>
+    <p>
+      {{ description }}
+    </p>
     <div class="actions">
       <a class="btn" :href="slug">Ir al post</a>
     </div>
@@ -18,7 +20,7 @@
 <script>
 export default {
   name: 'ArticleCard',
-  prop: {
+  props: {
     slug: {
       type: String,
       default: '',
@@ -32,7 +34,7 @@ export default {
       default: '',
     },
     date: {
-      type: Date,
+      type: String,
       default: '',
     },
     cover: {
